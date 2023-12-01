@@ -1,0 +1,19 @@
+<div class="nav">
+<% if(!admin){ %>
+    <!--  -->
+    <a href="/">Home</a>
+    &nbsp;&nbsp;&nbsp;
+    <a href="/register">Register</a>
+    &nbsp;&nbsp;&nbsp;
+    <a href="/login">Login</a>
+    &nbsp;&nbsp;&nbsp;
+    <!--  -->
+    <% } else { %>
+    <!--  -->
+    <a href="/profile">Home</a>
+    &nbsp;&nbsp;&nbsp
+    <a href="/reset">Reset Password</a>
+    &nbsp;&nbsp;&nbsp;
+    <a href="/signout">Signout</a>
+    <% } %>
+</div>

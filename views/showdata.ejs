@@ -1,0 +1,37 @@
+<%- include("header.ejs") %>
+<%- include("nav2.ejs") %>
+
+
+        <h1 class="center">Expense-Tracker show data</h1>
+        <h1 class="center">👋 <%= admin.username %></h1>
+
+        <% expenses.forEach(function(e,index){ %>
+   
+                 <br>
+                <%= "Amount  : "+e.amount%>
+                <br>
+                <%= "Remark  : "+e.remark%>
+                <br>
+                <%= "Category  : "+e.category%>
+                <br>
+                <%= "Paymentmode  : "+e.paymentmode%>
+                <br>
+                
+                <%= "Date  : "+e.createdAt%>
+                <br>
+                <a href="/update/<%= e.id %>">Update</a>
+                &nbsp;&nbsp;
+                <a href="/delete/<%= e.id %>">delete</a>
+                &nbsp;&nbsp;
+                
+                <br><br>
+
+                
+         <% })%>
+
+
+
+
+    
+
+<%- include("footer.ejs") %>

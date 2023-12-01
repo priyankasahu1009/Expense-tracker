@@ -1,0 +1,25 @@
+<%- include("header.ejs") %>
+<%- include("nav2.ejs") %>
+
+<h1 class="center">Expense-Tracker Update</h1>
+<h1 class="center">👋 <%= admin.username %></h1>
+
+
+  <form action="/update/<%= expense.id %>" method="POST">
+    <label for="amount">Amount:</label>
+    <input type="text" id="amount" name="amount" value="<%= expense.amount %>" required>
+<br><br>
+    <label for="remark">Remark:</label>
+    <input type="text" id="remark" name="remark" value="<%= expense.remark %>" required>
+<br><br>
+    <label for="category">Category:</label>
+    <input type="text" id="category" name="category" value="<%= expense.category %>" required>
+<br><br>
+    <label for="paymentmode">Payment Mode:</label>
+    <input type="text" id="paymentmode" name="paymentmode" value="<%= expense.paymentmode %>" required>
+<br><br>
+    <button type="submit">Update Expense</button>
+  </form>
+
+
+<%- include("footer.ejs") %>

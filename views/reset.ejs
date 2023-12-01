@@ -1,0 +1,14 @@
+<%- include("header.ejs") %>
+<%- include("nav.ejs") %>
+<div class="main">
+    <div class="register">
+        <h1>Reset password</h1>
+<form action="/reset" method="post">
+        
+    <input type="password" name="oldpassword" placeholder="oldpassword">
+    <input type="password" name="newpassword" placeholder="newpassword">
+    <input type="submit">
+</form>
+</div>
+</div>
+<%- include("footer.ejs") %>
