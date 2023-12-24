@@ -38,7 +38,7 @@ router.get('/login', function(req, res, next) {
 router.post("/login",
   passport.authenticate("local", {
       successRedirect: "/profile",
-      failureRedirect: "/login",
+      failureRedirect: "/login"
   }),
   function (req, res, next) {}
 );
@@ -99,23 +99,6 @@ router.post("/reset", isLoggedIn,async function (req, res, next) {
 router.get("/forget", function (req, res, next) {
   res.render("forget",{ admin: req.user });
 });
-router.post("/forget", async function (req, res, next) {
-  try {
-    const user = await User.findOne({ username: req.body.username });
-    if (!user)
-        return res.send("User not found! <a href='/forget'>Try Again</a>.");
-
-    await user.setPassword(req.body.newpassword);
-    await user.save();
-    res.redirect("/login");
-} catch (error) {
-    res.send(error);
-}
-
-
-
-});
-
 
 router.post("/send-mail", async function (req, res, next) {
   try {

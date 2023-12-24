@@ -3,26 +3,31 @@
 
 
         <h1 class="center" >Expense-Tracker Dashboard</h1>
-        <h1 class="center">👋 <%= admin.username %></h1>
-<div  class="main1">
- <div class="register">
-    <h1 class="center1">Total amount: <%= expenses.reduce((ac,cv) => ac+cv.amount, 0)%></h1>
+        <h1 class="center" >👋 <%= admin.username %></h1>
+       
+ <div id="container">
+<div class="top">
+    <h1 >Total amount: <%= expenses.reduce((ac,cv) => ac+cv.amount, 0)%></h1>
+    </div>
+
+  
 
 <form action="/filter">
-    <select name="key" id="c">
+    <select name="key" class="input">
         <option   value="amount">Amount</option>
         <option value="remark">Remark</option>
         <option   value="category">Category</option>
         <option  value="paymentmode">Payment Mode</option>
         <option  value="Date">Date</option>
     </select>
-    <input  id="c" type="text" name="value" placeholder="enter search term" />
-    <button id="c">filter</button>
+    <input  class="input" type="text" name="value" placeholder="enter search term" />
+    <button class="input">filter</button>
+    
+<button class="cc" ><a   href="/showdata">Show data</a></button>
 </form>
 
 
-<button class="cc" ><a   href="/showdata">Show data</a></button>
 </div>
-</div>
+
 
 <%- include("footer.ejs") %>

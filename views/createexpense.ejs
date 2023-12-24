@@ -1,19 +1,21 @@
 <%- include("header.ejs") %>
 <%- include("nav2.ejs") %>
 
-<div class="main">
-    <div class="register2">
-        <h1>create expense</h1>
+
+<div id="container">
+    <div class="top">
+        <h1>Create Expense</h1>
+    </div>
         <form action="/createexpense" method="POST">
-            <input type="number" name="amount" placeholder="Enter Amount" />
-            <input type="text" name="remark" placeholder="Remark" />
-            <input type="text" name="category" placeholder="Category" />
-            <select name="paymentmode">
+            <input type="number" name="amount" placeholder="Enter Amount" class="input"/>
+            <input type="text" name="remark" placeholder="Remark" class="input"/>
+            <input type="text" name="category" placeholder="Category" class="input"/>
+            <select name="paymentmode" class="input">
                 <option value="cash">Cash</option>
                 <option value="online">Online</option>
                 <option value="cheque">Cheque</option>
             </select>
-            <button>Add Expense</button>
+            <button class="input">Add Expense</button>
         </form>
         
 </div>

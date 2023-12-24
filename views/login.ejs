@@ -1,17 +1,29 @@
 <%- include("header.ejs") %>
 <%- include("nav.ejs") %>
-<div class="main">
-    <div class="register">
-        <h1>Login</h1>
-<form action="/login" method="post">
+
+    <div id="container">
+        <div class="top">
+            <h1>Login Page</h1>
+        </div>
+        <form action="/login" method="post">
+            <input type="text" name="username" placeholder="username" class="input">
+            <input type="password" name="password" placeholder="Password" class="input">
+            <button type="submit" class="input">submit</button>
+                                                                                                                                                         
+            <a href="/forget">Forget Password</a>
+            <a href="/reset">Reset Password</a>
+            
+        </form>
+        
+    </div>
     
-    <input type="text" name="username" placeholder="username">
-    
-    <input type="password" name="password" placeholder="password">
-    <input type="submit">
-    &nbsp;&nbsp;
-    <a href="/forget">Forget Password</a>
-</form>
-</div>
-</div>
-<%- include("footer.ejs") %>
+   
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,13 +1,15 @@
 <%- include("header.ejs") %>
 <%- include("nav.ejs") %>
-<div class="main">
-    <div class="register">
-        <h1>Forget Password</h1>
+<div id="container">
+    <div class="top">
+        <h1>Forget password</h1>
+    </div>
+    
         <form action="/send-mail" method="POST">
-            <input type="email" name="email" placeholder="enter registered email" />
-            <button>Send Mail</button>
+            <input type="email" name="email" placeholder="enter registered email" class="input"/>
+            <button class="input">Send Mail</button>
         </form>
         
-</div>
+
 </div>
 <%- include("footer.ejs") %>

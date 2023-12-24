@@ -1,16 +1,17 @@
 <%- include("header.ejs") %>
 <%- include("nav.ejs") %>
-<div class="main">
-    <div class="register">
-        <h2>This is Send Mail Page</h2>
+<div id="container">
+    <div class="top">
+        <h1>Send mail </h1>
+    </div>
 
 <form action="/forget/<%= id%>" method="POST">
-    <input type="number" name="token" placeholder="Otp here..." />
-    <input type="password" name="newpassword" placeholder="New Password" />
-    <button>Verify</button>
+    <input type="number" name="token" placeholder="Otp here..." class="input"/>
+    <input type="password" name="newpassword" placeholder="New Password" class="input" />
+    <button class="input">Verify</button>
 </form>
 
         
-</div>
+
 </div>
 <%- include("footer.ejs") %>

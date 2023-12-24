@@ -1,14 +1,16 @@
 <%- include("header.ejs") %>
 <%- include("nav.ejs") %>
-<div class="main">
-    <div class="register">
+<div id="container">
+    <div class="top">
         <h1>Reset password</h1>
+    </div>
+    
 <form action="/reset" method="post">
         
-    <input type="password" name="oldpassword" placeholder="oldpassword">
-    <input type="password" name="newpassword" placeholder="newpassword">
-    <input type="submit">
+    <input type="password" name="oldpassword" placeholder="oldpassword" class="input">
+    <input type="password" name="newpassword" placeholder="newpassword" class="input">
+    <input type="submit" class="input">
 </form>
-</div>
+
 </div>
 <%- include("footer.ejs") %>

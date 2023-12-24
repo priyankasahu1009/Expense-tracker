@@ -1,25 +1,102 @@
-<%- include("header.ejs") %>
-<%- include("nav2.ejs") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+      body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  background-color: #DFB7E3;
+  background: linear-gradient(to right, white, #DFB7E3);
+}
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 15px;
+    min-height: 380px;
+    min-width: 360px;
+    background-color: white;
+    overflow: hidden;
+}
+.top:hover {
+    transition: .4s;
+    border-radius: 0;
+    width: 100%;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 100%;
+}
 
-<h1 class="center">Expense-Tracker Update</h1>
-<h1 class="center">👋 <%= admin.username %></h1>
+
+.top h1 {
+    color: white;
+    font-size: 30px;
+}
+.input {
+    background-color: #eee;
+    border: none;
+    border-left: #DFB7E3 solid 1px;
+    padding: 10px;
+    border-bottom: #DFB7E3 solid 1px;
+    border-radius: 10px;
+}
+
+.top {
+    background-color: #c4d3ec;
+    background: linear-gradient(to left, #DFB7E3, #B5C7E7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    border-radius: 0 0 75px 75px;
+}
+
+
+    </style>
+    <link href="./stylesheets/style2.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+  <div id="container">
+    <div class="top">
+        <h1 >Expense-Tracker Update</h1>
+    </div>
+
+   
 
 
   <form action="/update/<%= expense.id %>" method="POST">
     <label for="amount">Amount:</label>
-    <input type="text" id="amount" name="amount" value="<%= expense.amount %>" required>
-<br><br>
+    <input type="text"  name="amount" value="<%= expense.amount %>" class="input">
+  
     <label for="remark">Remark:</label>
-    <input type="text" id="remark" name="remark" value="<%= expense.remark %>" required>
-<br><br>
+    <input type="text" name="remark" value="<%= expense.remark %>" class="input" >
+   
     <label for="category">Category:</label>
-    <input type="text" id="category" name="category" value="<%= expense.category %>" required>
-<br><br>
+    <input type="text" name="category" value="<%= expense.category %>" class="input">
+   
     <label for="paymentmode">Payment Mode:</label>
-    <input type="text" id="paymentmode" name="paymentmode" value="<%= expense.paymentmode %>" required>
-<br><br>
-    <button type="submit">Update Expense</button>
+    <input type="text"  name="paymentmode" value="<%= expense.paymentmode %>" class="input">
+   
+    <button type="submit" class="input">Update Expense</button>
   </form>
 
+</div>
 
-<%- include("footer.ejs") %>
+</body>
+</html>
